@@ -1,7 +1,7 @@
 import React from "react";
 import type { InputProps } from "./input.type";
 
-const Input: React.FC<InputProps> = ({
+export const Input: React.FC<InputProps> = ({
   id,
   type = "text",
   value,
@@ -16,5 +16,3 @@ const Input: React.FC<InputProps> = ({
     className={`border border-gray-300 rounded px-3 py-2 w-full ${className}`}
   />
 );
-
-export default Input;

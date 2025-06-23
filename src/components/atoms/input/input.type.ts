@@ -1,7 +1,22 @@
 export type InputProps = {
   id: string;
-  type?: string;
+  name?: string;
+  type?: React.HTMLInputTypeAttribute;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+  disabled?: boolean;
+  readOnly?: boolean;
+  required?: boolean;
+  autoFocus?: boolean;
+  autoComplete?: string;
+  maxLength?: number;
+  minLength?: number;
+  min?: number | string;
+  max?: number | string;
+  pattern?: string;
+  inputMode?: React.HTMLAttributes<HTMLInputElement>["inputMode"];
 };

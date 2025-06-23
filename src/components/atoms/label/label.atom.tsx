@@ -6,7 +6,10 @@ export const Label: React.FC<LabelProps> = ({
   children,
   className = "",
 }) => (
-  <label htmlFor={htmlFor} className={`block mb-1 font-medium ${className}`}>
+  <label
+    htmlFor={htmlFor}
+    className={`block mb-1 text-sm font-medium text-gray-700 ${className}`}
+  >
     {children}
   </label>
 );

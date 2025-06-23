@@ -64,7 +64,7 @@ export const Disabled: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const input = canvas.getByDisplayValue("Can't touch this");
-    expect(input).toBeDisabled();
+    await expect(input).toBeDisabled();
   },
 };
 

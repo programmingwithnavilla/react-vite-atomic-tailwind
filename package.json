@@ -17,12 +17,13 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@storybook/testing-library": "^0.2.2",
     "@chromatic-com/storybook": "^4.0.1",
     "@eslint/js": "^9.25.0",
     "@storybook/addon-docs": "^9.0.12",
     "@storybook/addon-onboarding": "^9.0.12",
+    "@storybook/jest": "^0.2.3",
     "@storybook/react-vite": "^9.0.12",
+    "@storybook/testing-library": "^0.2.2",
     "@tailwindcss/postcss": "^4.1.7",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",

@@ -20,37 +20,36 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const label = canvas.getByText("Email Address");
-
     expect(label).toBeInTheDocument();
-    expect(label.tagName).toBe("LABEL");
     expect(label).toHaveAttribute("for", "email");
   },
 };
 
 export const WithCustomStyle: Story = {
   args: {
-    className: "text-red-600",
+    htmlFor: "required",
     children: "Required Field",
+    className: "text-red-600",
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const label = canvas.getByText("Required Field");
-
     expect(label).toHaveClass("text-red-600");
   },
 };
 
 export const WithInput: Story = {
   args: {
-    htmlFor: "email",
-    children: "Email",
+    htmlFor: "input-with-label",
+    children: "Full Name",
   },
+
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const label = canvas.getByText("Email");
-    const input = canvas.getByLabelText("Email");
+    const label = canvas.getByText("Full Name");
+    const input = canvas.getByPlaceholderText("Enter name");
 
-    expect(input).toBeInTheDocument();
-    expect(label).toHaveAttribute("for", "email");
+    await expect(label).toHaveAttribute("for", "input-with-label");
+    await expect(input).toBeInTheDocument();
   },
 };

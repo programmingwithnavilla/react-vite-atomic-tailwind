@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button } from "./button.atom";
 import { userEvent, within } from "@storybook/testing-library";
-import { expect } from "@storybook/test-runner";
+import { expect } from "@storybook/jest";
 // Meta configuration
 const meta: Meta<typeof Button> = {
   title: "Atoms/Button",
@@ -23,7 +23,7 @@ export const Default: Story = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole("button");
 
-    expect(button).toBeInTheDocument();
+    await expect(button).toBeInTheDocument();
     await userEvent.click(button);
   },
 };
@@ -36,7 +36,7 @@ export const Disabled: Story = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole("button");
 
-    expect(button).toBeDisabled();
+    await expect(button).toBeDisabled();
   },
 };
 
@@ -48,8 +48,8 @@ export const Loading: Story = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole("button");
 
-    expect(button).toHaveTextContent("Loading...");
-    expect(button).toBeDisabled();
+    await expect(button).toHaveTextContent("Loading...");
+    await expect(button).toBeDisabled();
   },
 };
 

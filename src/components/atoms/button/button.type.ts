@@ -1,9 +1,6 @@
+import type { ButtonHTMLAttributes } from "react";
+
 export type ButtonProps = {
-  label: string;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  className?: string;
-  type?: "button" | "submit" | "reset";
-  disabled?: boolean;
+  label?: string;
   loading?: boolean;
-  children?: React.ReactNode;
-};
+} & ButtonHTMLAttributes<HTMLButtonElement>;

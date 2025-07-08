@@ -5,4 +5,5 @@ export type ButtonProps = {
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
   loading?: boolean;
+  children?: React.ReactNode;
 };

@@ -10,7 +10,11 @@
     "preview": "vite preview",
     "tw:init": "tailwindcss init -p",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest watch"
+    
   },
   "dependencies": {
     "react": "^19.1.0",

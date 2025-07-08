@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      aria-busy={loading}
+      {...(loading ? { "aria-busy": true } : {})}
       type={type}
       onClick={onClick}
       disabled={disabled || loading}

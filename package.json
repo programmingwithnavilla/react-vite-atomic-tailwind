@@ -13,7 +13,9 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
     
   },
   "dependencies": {

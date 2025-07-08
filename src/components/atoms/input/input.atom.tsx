@@ -22,6 +22,7 @@ export const Input: React.FC<InputProps> = ({
   max,
   pattern,
   inputMode,
+  ...rest
 }) => (
   <input
     id={id}
@@ -44,5 +45,6 @@ export const Input: React.FC<InputProps> = ({
     max={max}
     pattern={pattern}
     inputMode={inputMode}
+    {...rest}
   />
 );

@@ -8,6 +8,7 @@ export const Button: React.FC<ButtonProps> = ({
   type = "button",
   disabled = false,
   loading = false,
+  children,
 }) => {
   return (
     <button
@@ -20,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
           : "bg-blue-500 hover:bg-blue-600 text-white"
       } ${className}`}
     >
-      {loading ? "Loading..." : label}
+      {loading ? "Loading..." : children ?? label}
     </button>
   );
 };

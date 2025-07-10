@@ -1,6 +1,6 @@
-import React, { type JSX } from "react";
-import { Navigate } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
+import React, { type JSX } from 'react';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from '../hooks/use-auth/use-auth.hook';
 
 interface PrivateRouteProps {
   children: JSX.Element;

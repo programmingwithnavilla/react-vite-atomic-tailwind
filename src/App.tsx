@@ -1,15 +1,15 @@
 // src/App.tsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./hooks/useAuth";
-import { PrivateRoute } from "./routes/private.route";
-import { ProtectedRoute } from "./routes/protected.route";
-import { PublicRoute } from "./routes/public.route";
-import { AdminPanelPage } from "./pages/admin-panel.page";
-import { DashboardPage } from "./pages/dashboard.page";
-import { LandingPage } from "./pages/landing.page";
-import { LoginPage } from "./pages/login.page";
-import { SignupPage } from "./pages/signup.page";
-import { ProfilePage } from "./pages/profile.page";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './hooks/use-auth/use-auth.hook';
+import { PrivateRoute } from './routes/private.route';
+import { ProtectedRoute } from './routes/protected.route';
+import { PublicRoute } from './routes/public.route';
+import { AdminPanelPage } from './pages/admin-panel.page';
+import { DashboardPage } from './pages/dashboard.page';
+import { LandingPage } from './pages/landing.page';
+import { LoginPage } from './pages/login.page';
+import { SignupPage } from './pages/signup.page';
+import { ProfilePage } from './pages/profile.page';
 
 const App = () => (
   <AuthProvider>
@@ -63,7 +63,7 @@ const App = () => (
         <Route
           path="/admin"
           element={
-            <PrivateRoute roles={["admin", "manager"]}>
+            <PrivateRoute roles={['admin', 'manager']}>
               <AdminPanelPage />
             </PrivateRoute>
           }
